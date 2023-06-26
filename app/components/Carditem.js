@@ -56,39 +56,40 @@ const CardItem = () => {
   ]);
 
   return (
-    <div id='card' className='w-full flex flex-shrink-0 p-20 bg-[#380D41] gradient-border overflow-hidden'>
-     
-     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-  <div className="flex justify-center space-x-12 sm:space-x-24">
-    {cards.map((card, index) => (
-      <Card
-        key={index}
-        pname={card.pname}
-        imageSrc={card.imageSrc}
-        description={card.description}
-        price={card.price}
-        size={card.size}
-      />
-    ))}
-  </div>
-</div>
+    <div id='card' className='w-full p-20 bg-[#380D41] '>
 
-      <Image
-        src='/image/arrow.png'
-        loading='lazy'
-        className=' cursor-pointer'
-        width={46.97} 
-        height={46.97} 
-        onClick={handleLeftArrowClick}
-      />
-      <Image 
-        src='/image/Vector.png'
-        className='absolute right-0 mr-[117px] cursor-pointer flex flex-shrink-0 '
-        width={46.97} 
-        height={46.97} 
-        onClick={handleRightArrowClick}
-      />
-    </div>
+     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:translate-y-1/2 -translate-y-1/2 overflow-hidden">
+
+    <div className="flex space-x-5 mt-[100px] sm:mt-[200px]  sm:space-x-[120px]">
+              {cards.map((card, index) => (
+                <Card
+                  key={index}
+                  pname={card.pname}
+                  imageSrc={card.imageSrc}
+                  description={card.description}
+                  price={card.price}
+                  size={card.size}
+                  
+                />
+              ))}
+            </div>
+          </div>
+    <Image
+            src='/image/arrow.png'
+            loading='lazy'
+            className=' cursor-pointer'
+            width={46.97} 
+            height={46.97} 
+            onClick={handleLeftArrowClick}
+          />
+          <Image 
+            src='/image/Vector.png'
+            className='absolute right-0 mr-[117px] cursor-pointer flex flex-shrink-0 '
+            width={46.97} 
+            height={46.97} 
+            onClick={handleRightArrowClick}
+          />
+        </div>
   );
 };
 
