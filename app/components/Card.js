@@ -2,9 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import './card.css'
 
-
-
-
 const Card = ({ pname, imageSrc, description, price, size}) => {
   return (
 
@@ -15,7 +12,6 @@ const Card = ({ pname, imageSrc, description, price, size}) => {
           className={size}
         
       />
-
       <p className=" text-black font-bold">{pname}</p>
       <p className="text-[#0A0A0A] mt-[8.6px]">{description}</p>
       <p className="text-purple-900 font-bold mt-[10.85px]">{price}</p>

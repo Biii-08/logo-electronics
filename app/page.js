@@ -7,6 +7,7 @@ import Carditem from './components/Carditem'
 export default function Home() {
   return (
     <div  className="bg-[#380D41]" >
+        
         <HomePage/>
         <Carditem/>
         <Productcard/>

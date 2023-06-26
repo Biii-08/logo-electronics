@@ -1,5 +1,4 @@
 
-
 import ProductDetails from '@/app/modules/proddetails/Productdetail';
 import React from 'react';
 
