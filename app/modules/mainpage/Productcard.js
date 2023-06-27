@@ -80,7 +80,7 @@ const Product = () => {
                 </h2>
 
                 <Link href={`/ProdDetails/${product.id}`}>
-                  <button className="uppercase  text-[20px] sm:text-[25px] font-semibold text-black h-[70px] sm:h-[86px] rounded-full py-2 px-10 sm:mt-12 sm:w-[340px]  w-[250px] transition-all duration-300 ease-in-out flex justify-between items-center ">
+                  <button className="uppercase  text-[20px] sm:text-[25px] font-semibold text-black h-[70px] md:h-[86px] sm:h-[75px] rounded-full py-2 px-10 sm:mt-1 md:mt-9 md:w-[350px] sm:w-[220px] w-[250px] transition-all duration-300 ease-in-out flex justify-between items-center ">
                     View
                     <BsArrowRightCircle
                       size={40}

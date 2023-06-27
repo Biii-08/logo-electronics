@@ -13,12 +13,13 @@ const scrollToTop = () => {
 
 const Footer = () => {
   return (
-    <div className="bg-[#380D41]">
-      <div
-        className="flex flex-col md:flex-row md:justify-between text-white p-10 mt-60 relative background ">
+    <div className="bg-[#380D41]  ">
+      <div className="footer-wrapper h-[1100px] sm:h-[650px]  ">
+        <div className="mask-image absolute top-0 left-0 w-full h-full"></div>
 
-          <div className="flex items-center md:w-1/4">
-            <div className="flex flex-col ml-[30px] sm:ml-[75px] md:ml-1">
+        <div className="footer-content flex flex-col sm:flex-row sm:justify-between  ">
+          <div className="left-side">
+            <div className="footer-logo flex flex-col ml-12 sm:ml-[30px]">
               <Image
                 src="/image/navlogo.png"
                 alt="Logo"
@@ -71,7 +72,7 @@ const Footer = () => {
               </div>
             </div>
           
-        
+        </div>
 
         <a href="#" onClick={scrollToTop} className="cursor-pointer">
           <Image src="/image/rocket.png" alt="Scroll to top" className="right-0 absolute top-0" width={108} height={184} />
@@ -81,6 +82,7 @@ const Footer = () => {
       <div className="text-center mt-8">
         <p className="p-[39px] font-semibold text-white">COPYRIGHT 2021 lOGO ALL RIGHT RESERVED</p>
       </div>
+    </div>
   );
 };
 

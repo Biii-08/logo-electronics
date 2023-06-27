@@ -31,7 +31,7 @@ const ProductDetails = ({ productId }) => {
   return (
     <div id='prod-detail' className="relative bg-[#380D41]">
       
-            <img src="/image/Detail.png" alt=" Product details" className='w-full h-[400px] sm:h-[839px] mt-0' />
+            <img src="/image/Detail.png" alt=" Product details" className='w-full h-[400px] sm:h-[800px] mt-0' />
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem sm:text-6xl text-[26px] text-[#F903AA] shadow-md text-wrapper">Product Details</h1>
             </div>
