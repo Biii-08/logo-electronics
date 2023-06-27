@@ -21,7 +21,7 @@ const Nav = () => {
   return (
     <div style={{ backgroundColor: `${navBg}` }} className='flex justify-between items-center'>
       {/* web view navbar */}
-      <div className='w-full h-[55px] md:h-[148px] flex justify-between overflow-hidden' style={{ boxShadow: '0px 4px 4px #ffffff40' }}>
+      <div className='w-full h-[55px] md:h-[148px] flex justify-between overflow-hidden z-50' style={{ boxShadow: '0px 4px 4px #ffffff40' }}>
         {/* logo */}
         <Link href='/'>
           <div className='leading-[63.98px] flex-start md:flex-start'>
@@ -46,7 +46,7 @@ const Nav = () => {
       </div>
 
       {/* mobile view */}
-      <div className={navbar ? 'md:hidden fixed left-0 top-0 w-full h-screen z-50 ' : ''}>
+      <div className={navbar ? ' fixed md:hidden  left-0 top-0 w-full h-screen z-50 ' : ''}>
         {/* Side Drawer Menu */}
         <div
           className={

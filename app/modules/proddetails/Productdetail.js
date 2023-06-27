@@ -31,18 +31,18 @@ const ProductDetails = ({ productId }) => {
   return (
     <div id='prod-detail' className="relative bg-[#380D41]">
       
-            <img src="/image/Detail.png" alt=" Product details" className='w-full' />
+            <img src="/image/Detail.png" alt=" Product details" className='w-full h-[400px] sm:h-[839px] mt-0' />
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <h1 className="font-routhem text-6xl text-[#F903AA] shadow-md">Product Details</h1>
+                <h1 className="font-routhem sm:text-6xl text-[26px] text-[#F903AA] shadow-md text-wrapper">Product Details</h1>
             </div>
             <div className="flex items-center justify-center mt-[98px]">
                 <h2 className="absolute left-1/2 font-normal text-4xl text-white  mt-[400px] font-routhem tracking-widest transform -translate-x-1/2">{product.title}</h2>
             </div>
             <div className="flex justify-center items-center ">
-            <div className="bg-white rounded-lg shadow-md p-6 mt-[300px] w-[1138px] h-[436px]  gradient-border">
-                <div className="flex">
+            <div className="bg-white rounded-lg shadow-md p-6 flex justify-center sm:mt-[250px] md:left-1/2 mt-[300px] w-[390px] sm:w-[1138px] h-[794px] sm:h-[436px]   gradient-border">
+                <div className="flex flex-col sm:flex-row">
                     <div className='gradient-border'>
-                        <img src={product.thumbnail} alt={product.title} className="w-[377px] h-[375px]" />
+                        <img src={product.thumbnail} alt={product.title} className="sm:w-[377px] sm:h-[375px] w-[324px] h-[322px]" />
                     </div>
                     <div className="w-2/3 pl-6">
                         <h2 className="text-2xl font-bold text-gray-800 mb-4 mt-[54px]">{product.title}</h2>
@@ -60,7 +60,7 @@ const ProductDetails = ({ productId }) => {
                 </div>
             </div>
             </div>
-             <div className="mt-[119px] flex justify-center items-center">
+             <div className="mt-[119px] sm:ml-[119px] flex justify-center items-center">
              <Detailcard thumbnails={thumbnails} />
             </div> 
             <div className="flex mt-[118px] justify-center gap-[39px] font-semibol text-white">

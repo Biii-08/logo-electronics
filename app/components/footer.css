@@ -6,7 +6,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 900px;
   display: flex;
   align-items: center;
 }
@@ -47,7 +46,6 @@
 .social-media-icons h1 {
   font-weight: bold;
   margin-right: 10px;
-  font-size: 3xl;
   background-image: url('/image/follow.png');
   background-size: cover;
   background-position: center;

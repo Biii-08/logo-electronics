@@ -13,3 +13,10 @@
       )
       1;
   }
+ .text-wrapper{
+    -webkit-text-stroke: 0.4px #e2e53c;
+    color: #f903aa;
+    line-height:129px;
+    font-weight: 400;
+    text-shadow: 8px 22px 4px #00000040;
+  }

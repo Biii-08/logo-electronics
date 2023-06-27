@@ -4,6 +4,7 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import Link from 'next/link';
 import axios from 'axios';
+import './card.css';
 
 const ProductItem = () => {
   const [isFilled, setIsFilled] = useState(false);
@@ -74,9 +75,9 @@ const ProductItem = () => {
             <h2 className='text-[32px] w-[312px] h-[55px] font-regular  text-black mt-10'>
               {truncateText(product.title, 15)}
             </h2>
-            <div className='button-container'>
+            <div className='button-container flex'>
               <Link href='/ProdDetails'>
-                <button className='uppercase text-[25px] rounded-full py-2 px-10 mt-9 mr-[51px] transition-all duration-300 ease-in-out w-[340px] h-[86px] text-black flex justify-center items-center'>
+                <button className='uppercase  text-[25px] rounded-full py-2 px-10 mt-9 mr-[51px] transition-all duration-300 ease-in-out sm:w-[340px]  w-[250px] h-[86px] text-black flex justify-center items-center'>
                   View
                   <BsArrowRightCircle
                     size={47}

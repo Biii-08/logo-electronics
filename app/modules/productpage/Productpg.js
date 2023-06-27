@@ -40,15 +40,16 @@ const Product = () => {
 
     return (
         <div  id='rubi' className="flex flex-col items-center mt-8">
-        <div className="grid grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-20 gap-1">
+            
             {products.length > 0 ? (
 
                 products.map((product) => (
                     <div
                         key={product.id}
-                        className="bg-white rounded-[36px] shadow-md p-4 w-[397px] h-[542px] mb-40"
+                        className="bg-white rounded-[36px] shadow-md p-4 sm:w-[300px] sm:h-[400px] md:w-[397px] md:h-[542px] w-[300px] h-[400px] mb-40"
                     >
-                        <div className=" absolute font-medium text-[21px] mt-4 ml-4 gradient-text">
+                        <div className=" absolute font-medium sm:text-[15px] md:text-[21px] text-[15px] sm:mt-4 mt-2 ml-4 gradient-text">
                             <p>{product.brand}</p>
                         </div>
                         
@@ -67,26 +68,26 @@ const Product = () => {
                             />
                             )}
                         </div>
-                        <div className="text-center mt-10" id="product">
+                        <div className="text-center md:mt-10 sm:mt-1" id="product">
                             <div className="flex justify-center items-center">
                                 <img
                                     src={product.thumbnail}
                                     alt=""
-                                    className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105"
+                                    className="md:w-[300px] sm:w-[250px]  w-[250px] md:h-[189px] sm:h-[150px] h-[150px]  transition-all duration-300 ease-in-out transform hover:scale-105"
                                 />
                             </div>
-                            <h2 className="text-[34px] w-[312px] h-[55px] font-regular mt-10 text-black">
+                            <h2 className="md:text-[34px] sm:text-[29px] w-[312px] h-[55px] font-regular sm:mt-10 mt-4 text-black">
                                 {truncateText(product.title, 15)}
                             </h2>
-                            
+                                        
                            <Link href={`/ProdDetails/${product.id}`}>
-                            <button className='uppercase text-[25px] rounded-full py-2 px-10 mt-9 mr-[51px] transition-all duration-300 ease-in-out w-[340px] h-[86px] text-black flex justify-center items-center'>
+                           <button className="uppercase  text-[20px] sm:text-[25px] font-semibold text-black h-[70px] sm:h-[86px] rounded-full py-2 px-10 sm:mt-12 sm:w-[340px]  w-[250px] transition-all duration-300 ease-in-out flex justify-between items-center ">
                             View
                             <BsArrowRightCircle
-                                size={47}
-                                style={{ marginLeft: '51px' }}
+                            size={40}
+                            style={{ marginLeft: '51px' }}
                             />
-                            </button>
+                        </button>
                         </Link>
                         </div>
                     </div>
