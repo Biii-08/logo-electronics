@@ -3,13 +3,13 @@ import './card.css'
 
 const DetailCard = ({ thumbnails }) => {
   return (
-    <div id="detail-card" className="flex space-x-4 sm:mt-[200px] gap-[10px] sm:gap-[100px]">
-  {thumbnails.map((thumbnail, index) => (
-    <div key={index} className="sm:w-[300px] w-[220px] sm:h-[391px] h-[300.55px] bg-white p-6 shadow-md border-4 gradient-border">
-      <img src={thumbnail} alt="" className="w-full h-full object-cover object-center" />
+    <div id="detail-card" className="flex space-x-4 sm:mt-[200px] gap-[10px] sm:gap-[100px] left-1/2 transform -translate-x-1  overflow-hidden">
+      {thumbnails.map((thumbnail, index) => (
+        <div key={index} className="sm:w-[300px] w-[220px] sm:h-[391px] h-[300.55px] bg-white p-6 shadow-md border-4 gradient-border">
+          <img src={thumbnail} alt="" className="w-full h-full object-cover object-center" />
+        </div>
+      ))}
     </div>
-  ))}
-</div>
   );
 };
 

@@ -146,37 +146,26 @@
       
       
         /* detail card animation using the previous @keyframes */
-        #detail-card .gradient-border:nth-child(1) {
-          animation: slideAnimation 2s infinite;
-          animation-delay: 0s; /* Delay for the first card */
-        }
-        
-        #detail-card .gradient-border:nth-child(2) {
-          animation: slideAnimation 2s infinite;
-          animation-delay: 0.2s; /* Delay for the second card */
-        }
-        
-        #detail-card .gradient-border:nth-child(3) {
+      #detail-card .gradient-border:nth-child(1),
+      #detail-card .gradient-border:nth-child(2),
+      #detail-card .gradient-border:nth-child(3),
+      #detail-card .gradient-border:nth-child(4) {
+        animation: slideAnimation 2s infinite;
+      }
+      
+      @media (max-width: 1024px) {
+        #detail-card .gradient-border {
           animation: none;
           display: none;
         }
-        
-        #detail-card .gradient-border:nth-child(4) {
-          animation: none;
-          display: none;
+      
+        #detail-card .gradient-border:nth-child(-n+2) {
+          animation: slideAnimation 2s infinite;
+          display: block;
         }
+      }
+      
         
-        @media (max-width: 1024px) {
-          #detail-card .gradient-border {
-            animation: none;
-            display: none;
-          }
-        
-          #detail-card .gradient-border:nth-child(-n+2) {
-            animation: slideAnimation 2s infinite;
-            display: block;
-          }
-        }
         
 
       
