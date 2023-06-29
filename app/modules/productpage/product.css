@@ -21,3 +21,116 @@
     color: #f903aa;
     font-weight: 400;
   }
+
+  button {
+    background: linear-gradient(
+      90deg,
+      #920aa8 2%,
+      #e019cc 20%,
+      #ff81e3 48%,
+      #fc75d6 52%,
+      #df55f6 60%,
+      #e822ec 71%,
+      #e80f91 75%,
+      #ee19d8 81.25%,
+      #f323b7 87.5%,
+      #fe3873 100%
+    );
+  }
+  
+  .button:hover {
+    background: #fff; /* Change background to white on hover */
+    color: linear-gradient(
+      90deg,
+      #920aa8 2%,
+      #e019cc 20%,
+      #ff81e3 48%,
+      #fc75d6 52%,
+      #df55f6 60%,
+      #e822ec 71%,
+      #e80f91 75%,
+      #ee19d8 81.25%,
+      #f323b7 87.5%,
+      #fe3873 100%
+    ); /* Apply gradient to text color */
+    border: 2px solid
+      linear-gradient(
+        90deg,
+        #920aa8 2%,
+        #e019cc 20%,
+        #ff81e3 48%,
+        #fc75d6 52%,
+        #df55f6 60%,
+        #e822ec 71%,
+        #e80f91 75%,
+        #ee19d8 81.25%,
+        #f323b7 87.5%,
+        #fe3873 100%
+      ); /* Apply gradient to border */
+  }
+  .goldtext .gradient-border {
+    border: 5px solid;
+    border-image: linear-gradient(
+      90deg,
+      #a8620a 2%,
+      #e09519 20%,
+      #ffe581 48%,
+      #fcdc75 52%,
+      #f6c755 60%,
+      #eca522 71%,
+      #e8980f 75%,
+      #feb838 100%
+    );
+    border-image-slice: 1;
+  }
+  
+  #rubi .gradient-text {
+    background-image: linear-gradient(
+      90deg,
+      #a8620a 2%,
+      #e09519 20%,
+      #ffe581 48%,
+      #fcdc75 52%,
+      #f6c755 60%,
+      #eca522 71%,
+      #e8980f 75%,
+      #feb838 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #product li {
+    background-color: transparent;
+    background-image: linear-gradient(
+      90deg,
+      transparent 50%,
+      #920aa8 2%,
+      #e019cc 20%,
+      #ff81e3 48%,
+      #fc75d6 52%,
+      #df55f6 60%,
+      #e822ec 71%,
+      #e80f91 75%,
+      #ee19d8 81.25%,
+      #fe3873 100%
+    );
+    background-size: 200% auto;
+    background-position: -100% 50%;
+    transition: background-position 0.5s;
+  }
+  
+  #product li:hover {
+    background-position: 0% 50%;
+  }
+  
+  .wrap {
+    -webkit-text-stroke: 0.5px #e2e53c;
+    color: #f903aa;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    text-align: center;
+    text-shadow: 8px 22px 4px #00000040;
+    top: 0;
+  }

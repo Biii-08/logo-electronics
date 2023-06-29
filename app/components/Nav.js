@@ -6,7 +6,7 @@ import { RiMenuFoldLine, RiMenuUnfoldLine } from 'react-icons/ri';
 
 const Nav = () => {
   const [navbar, setNav] = useState(false);
-  const [navBg, setNavBg] = useState('#380D41');
+  const [navBg, ] = useState('#380D41');
   const [showContent, setShowContent] = useState(true);
 
   const handleNav = () => {
@@ -21,7 +21,7 @@ const Nav = () => {
   return (
     <div style={{ backgroundColor: `${navBg}` }} className='flex justify-between items-center'>
       {/* web view navbar */}
-      <div className='w-full h-[55px] md:h-[148px] flex justify-between overflow-hidden z-50' style={{ boxShadow: '0px 4px 4px #ffffff40' }}>
+      <div className='w-full h-[40px] md:h-[148px] flex justify-between overflow-hidden z-50' style={{ boxShadow: '0px 4px 4px #ffffff40' }}>
         {/* logo */}
         <Link href='/'>
           <div className='leading-[63.98px] flex-start md:flex-start'>
@@ -40,13 +40,13 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <div onClick={handleNav} className='md:hidden p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-          <RiMenuUnfoldLine size={30} className='text-white' />
+        <div onClick={handleNav} className=' absolute md:hidden p-6 cursor-pointer hover:scale-110 ease-in duration-300 mt-9 right-0'>
+          <RiMenuUnfoldLine size={30} className='text-white ' />
         </div>
       </div>
 
       {/* mobile view */}
-      <div className={navbar ? ' fixed md:hidden  left-0 top-0 w-full h-screen z-50 ' : ''}>
+      <div className={navbar ? ' fixed md:hidden  top-0 w-full h-screen z-50 ' : ''}>
         {/* Side Drawer Menu */}
         <div
           className={
@@ -56,21 +56,23 @@ const Nav = () => {
           }
         >
           <div>
-            <div className='flex w-full items-center justify-between'>
-              <Link href='/' className='smooth=(true) duration-500'></Link>
-              <div onClick={handleNav} className=' p-3 cursor-pointer hover:scale-110 ease-in duration-300'>
-                <RiMenuFoldLine size={30} className='text-white ' />
+              <div className='flex w-full items-center justify-between hover:scale-110 ease-in duration-300'>
+                <Link href='/' className='smooth=(true) duration-500'></Link>
+                <div onClick={handleNav} className=' cursor-pointer  right-0 mt-5'>
+                  <RiMenuFoldLine size={30} className='text-white ' />
+                </div>
               </div>
-            </div>
-            <div className='flex justify-center my-4 mt-[125px]'>
-              <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} />
-            </div>
+              <div className='flex justify-center my-4 mt-[125px]'>
+                <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} />
+              </div>
           </div>
+
           <div id='nav' className='flex p-2 mt-[82px] flex-col'>
             <ul className='flex justify-center space-y-12'>
               <li onClick={() => setNav(false)} className='text-[25px] leading-[38px] px-[25px] fixed mb-[68px] text-color font-semibold gradient-border items-center rounded-full'>
                 <Link href='/'>Home</Link>
               </li>
+              
               <Link href='/productpage'>
                 <li onClick={() => setNav(false)} className='text-[25px] leading-[38px] mt-[37px] text-color font-semibold px-[25px] gradient-border rounded-full'>
                   Products
@@ -78,6 +80,7 @@ const Nav = () => {
               </Link>
             </ul>
           </div>
+
         </div>
       </div>
     </div>

@@ -25,13 +25,13 @@ const ProductDetails = ({ productId }) => {
   if (!product) {
     return <div>Loading...</div>;
   }
-
-  const thumbnails = Array(4).fill(product.thumbnail);
-
+  const filledStars = Math.round(product.rating);
+  
+  
   return (
-    <div id='prod-detail' className="relative bg-[#380D41]">
+    <div id='prod-detail' className="relative top-0 bg-[#380D41]">
       
-            <img src="/image/Detail.png" alt=" Product details" className='w-full h-[400px] sm:h-[549px] mt-0' />
+            <img src="/image/Detail.png" alt=" Product details" className='w-full h-[400px] sm:h-full mt-0' />
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem sm:text-6xl text-[26px] text-[#F903AA] shadow-md text-wrapper">Product Details</h1>
             </div>
@@ -42,14 +42,14 @@ const ProductDetails = ({ productId }) => {
             <div className="bg-white rounded-lg shadow-md p-6 flex justify-center sm:mt-[250px] md:left-1/2 mt-[300px] w-[390px] sm:w-[1138px] h-[794px] sm:h-[436px]   gradient-border">
                 <div className="flex flex-col sm:flex-row">
                     <div className='gradient-border'>
-                        <img src={product.thumbnail} alt={product.title} className="sm:w-[377px] sm:h-[375px] w-[324px] h-[322px]" />
+                        <img src={product.thumbnail} alt={product.title} className="  w-full h-full object-cover object-center" />
                     </div>
                     <div className="w-2/3 pl-6">
                         <h2 className="text-2xl font-bold text-gray-800 mb-4 mt-[54px]">{product.title}</h2>
                         <div className="flex items-center mb-4">
                             <span className="text-yellow-500 flex text-xl font-bold mr-2">
                                 {[...Array(5)].map((_, index) => (
-                                    <FaStar key={index} />
+                                     <FaStar key={index} color={index < filledStars ? '#ffc107' : '#c4c4c4'} />
                                 ))}
                             </span>
                         </div>
@@ -61,7 +61,7 @@ const ProductDetails = ({ productId }) => {
             </div>
             </div>
              <div className="mt-[119px] sm:ml-[119px] flex justify-center items-center">
-             <Detailcard thumbnails={thumbnails} />
+             <Detailcard image={product.images} />
             </div> 
             <div className="flex mt-[118px] justify-center gap-[39px] font-semibol text-white">
                 <BsArrowLeftCircle size={47} />

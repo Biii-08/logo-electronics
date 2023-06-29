@@ -28,9 +28,7 @@
 
       }
 
-      #nav .index{
-        z-index: 50 !important;
-      }
+    
       /* carditem */
 
       #card .gradient-border {
@@ -63,18 +61,17 @@
         }
       }
       
-      #card .gradient-border:nth-child(1),
-      #card .gradient-border:nth-child(2),
-      #card .gradient-border:nth-child(3),
-      #card .gradient-border:nth-child(4) {
+     
+      #card .gradient-border:nth-child(n) {
         animation: slideAnimation 2s infinite;
       }
       
-      @media (max-width: 1024px) {
-        #card .gradient-border {
-          animation: none;
-          display: none;
-        }
+      
+       @media (max-width: 1768px) {
+          #card .gradient-border {
+            animation: none;
+            display: none;
+          }
       
         #card .gradient-border:nth-child(-n+2) {
           animation: slideAnimation 2s infinite;
@@ -82,7 +79,24 @@
         }
       }
       
-      
+      @media (max-width: 532px) {
+        #card .gradient-border {
+          width: 200px;
+          height: 250px;
+        }
+      }
+      @media (max-width: 423px) {
+        #card .gradient-border {
+          width: 150px;
+          height: 200px;
+        }
+      }
+      @media (max-width: 423px) {
+        #card .img-size {
+          width: 150px;
+          height: 200px;
+        }
+      }
     
       /* view button gradient hover  */
 
@@ -146,10 +160,8 @@
       
       
         /* detail card animation using the previous @keyframes */
-      #detail-card .gradient-border:nth-child(1),
-      #detail-card .gradient-border:nth-child(2),
-      #detail-card .gradient-border:nth-child(3),
-      #detail-card .gradient-border:nth-child(4) {
+      #detail-card .gradient-border:nth-child(n){
+      
         animation: slideAnimation 2s infinite;
       }
       
@@ -165,7 +177,27 @@
         }
       }
       
-        
+      @media (min-width: 600px) and (max-width: 1053px) {
+       #card .image {
+          margin-top: 250px;
+          
+        }
+      }
+      @media (max-width:295px) {
+        #card .image {
+           margin-top:150px;
+         }
+        }
+      @media (max-width:320px){
+        #card .gradient-border{
+          width: 120px;
+          height:200px;
+          margin-top: 150px;
+        }
+      }
         
 
-      
+      /* #detail-card .gradient-border:nth-child(2),
+      #detail-card .gradient-border:nth-child(3),
+      #detail-card .gradient-border:nth-child(4)
+      #detail-card .gradient-border:nth-child(5)  { */

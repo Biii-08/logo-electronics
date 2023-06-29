@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import Link from 'next/link';
 import { BsArrowRightCircle } from 'react-icons/bs';
+import './home.css'
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -40,15 +41,15 @@ const Product = () => {
 
   return (
     <div id='rubi' className="flex flex-col items-center mt-8">
-          <h1 className=":textsm-[60px] text-[15px] font-routhem font-bold  sm:mt-[434px] mt-[50px] mb-12 text-wrapper">Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-20 sm:gap-20 gap-1">
+      <h1 className="sm:text-[60px] text-[30px] font-routhem font-bold sm:mt-[434px] mt-[50px] mb-12 text-wrapper">Products</h1>
+      <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-25 sm:gap-20 gap-1">
         {products.length > 0 ? (
           products.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-[36px] shadow-md p-4 sm:w-[300px] sm:h-[400px] md:w-[397px] md:h-[542px] w-[300px] h-[400px] mb-40"
+              className="bg-white rounded-[36px] shadow-md boxy p-4 sm:w-[250px] sm:h-[400px] md:w-[350px] md:h-[542px] w-[250px] h-[350px] mb-40"
             >
-              <div  className="absolute font-medium sm:text-[15px] md:text-[21px] text-[15px] sm:mt-4 mt-2 ml-4 gradient-text">
+                  <div  className="absolute font-medium sm:text-[15px] md:text-[21px] text-[15px] sm:mt-4 mt-2  gradient-text">
                 <p>{product.brand}</p>
               </div>
 
@@ -75,12 +76,12 @@ const Product = () => {
                     className="md:w-[300px] sm:w-[250px]  w-[250px] md:h-[189px] sm:h-[150px] h-[150px]  transition-all duration-300 ease-in-out transform hover:scale-105"
                   />
                 </div>
-                <h2 className="md:text-[34px] sm:text-[29px] w-[312px] h-[55px] font-regular sm:mt-10 mt-4 text-black">
+                <h2 className="md:text-[34px] sm:text-[29px] w-[312px] h-[55px] font-regular sm:mt-4  text-black">
                   {truncateText(product.title, 15)}
                 </h2>
 
                 <Link href={`/ProdDetails/${product.id}`}>
-                  <button className="uppercase  text-[20px] sm:text-[25px] font-semibold text-black h-[70px] md:h-[86px] sm:h-[75px] rounded-full py-2 px-10 sm:mt-1 md:mt-9 md:w-[350px] sm:w-[220px] w-[250px] transition-all duration-300 ease-in-out flex justify-between items-center ">
+                  <button className="uppercase  text-[20px] sm:text-[25px] font-semibold text-black h-[70px] md:h-[86px] sm:h-[75px] rounded-full py-2 px-10 sm:mt-1 md:mt-9 md:w-[300px] sm:w-[220px] w-[220px] transition-all duration-300 ease-in-out flex justify-between items-center ">
                     View
                     <BsArrowRightCircle
                       size={40}
@@ -92,7 +93,7 @@ const Product = () => {
             </div>
           ))
         ) : (
-          <p>Loading products...</p>
+          <p className='text-white'>Loading products...</p>
         )}
       </div>
     </div>
