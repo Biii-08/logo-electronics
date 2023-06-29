@@ -78,13 +78,6 @@
 ;
 }
 
-@media (max-width: 1240) {
-  #rubi .grid  {
-    gap: 25px;
-    grid-column: 2;
-    
-  }
-}
 
 @media screen and (max-width:389px){
   #main .lines{

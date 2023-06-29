@@ -10,6 +10,19 @@ const Product = () => {
   const [products, setProducts] = useState([]);
   const [isFilled, setIsFilled] = useState(false); // Add isFilled state
 
+  const handleHeartClick = (productId) => {
+    setProducts((prevProducts) =>
+        prevProducts.map((product) => {
+            if (product.id === productId) {
+                return {
+                    ...product,
+                    isHearted: !product.isHearted,
+                };
+            }
+            return product;
+        })
+    );
+};
   useEffect(() => {
     // Fetch the product data when the component mounts
     fetchProducts();
@@ -53,21 +66,16 @@ const Product = () => {
                 <p>{product.brand}</p>
               </div>
 
-              <div className="flex justify-end cursor-pointer mt-4">
-                {isFilled ? (
-                  <AiFillHeart
-                    size={35}
-                    style={{ color: 'red' }}
-                    onClick={handleClick}
-                  />
-                ) : (
-                  <AiOutlineHeart
-                    size={35}
-                    style={{ color: 'black' }}
-                    onClick={handleClick}
-                  />
-                )}
-              </div>
+              <div
+               className="flex justify-end cursor-pointer mt-4 mr-2"
+                 onClick={() => handleHeartClick(product.id)}
+                            >
+                  {product.isHearted ? (
+                    <AiFillHeart size={35} color='red' />
+                      ) : (
+                      <AiOutlineHeart size={35} />
+                       )}
+                     </div>
               <div className="text-center md:mt-10 sm:mt-1" id="product">
                 <div className="flex justify-center items-center">
                   <img
@@ -76,7 +84,7 @@ const Product = () => {
                     className="md:w-[300px] sm:w-[250px]  w-[250px] md:h-[189px] sm:h-[150px] h-[150px]  transition-all duration-300 ease-in-out transform hover:scale-105"
                   />
                 </div>
-                <h2 className="md:text-[34px] sm:text-[29px] w-[312px] h-[55px] font-regular sm:mt-4  text-black">
+                <h2 className="md:text-[34px] sm:text-[25px]  ml-0 font-regular sm:mt-4  text-black">
                   {truncateText(product.title, 15)}
                 </h2>
 

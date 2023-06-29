@@ -55,7 +55,7 @@ const CardItem = () => {
                     </div>
                 </div>
             ) : (
-                <p>Loading</p>
+                <p className='text-white'>Loading</p>
             )}
             <div className='md:mt-0 mt-[270px]   image flex'>
             <Image
