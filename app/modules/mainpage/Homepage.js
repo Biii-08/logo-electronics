@@ -24,13 +24,7 @@ const HomePage = () => {
     <div className="w-screen  relative flex justify-center items-center mt-0 bg-[#380D41]">
       {/* image */}
       <div className="image-wrapper  w-screen h-[519px] sm:h-[839px]">
-        <Image
-          src="/image/logo.png"
-          alt="homepage image"
-          layout="fill"
-          objectFit="cover"
-          className="w-screen h-full object-cover"
-        />
+        <Image src="/image/logo.png" alt="homepage image" layout="fill"objectFit="cover" className="w-screen h-full object-cover"/>
       </div>
 
       {/* heading inside image */}
