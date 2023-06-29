@@ -10,20 +10,22 @@ const ProductDetails = ({ productId }) => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetchProduct();
+    fetchProduct(productId);
   }, [productId]);
 
   const handleLeftArrowClick = () => {
+    const prevProductId = productId - 1;
+    fetchProduct(prevProductId);
   };
 
   const handleRightArrowClick = () => {
+    const nextProductId = productId + 1;
+    fetchProduct(nextProductId);
   };
 
-  const fetchProduct = async () => {
+  const fetchProduct = async (id) => {
     try {
-      const response = await axios.get(
-        `https://dummyjson.com/products/${productId}`
-      );
+      const response = await axios.get(`https://dummyjson.com/products/${id}`);
       setProduct(response.data);
     } catch (error) {
       console.error("Error fetching product:", error);
@@ -33,6 +35,7 @@ const ProductDetails = ({ productId }) => {
   if (!product) {
     return <div>Loading...</div>;
   }
+
   const filledStars = Math.round(product.rating);
 
   return (
@@ -92,8 +95,8 @@ const ProductDetails = ({ productId }) => {
       <div className="mt-[119px] sm:ml-[119px] flex justify-center items-center">
         <Detailcard image={product.images} />
       </div>
-      <div className="flex mt-[118px] justify-center gap-[39px] font-semibol text-white">
-        <BsArrowLeftCircle size={47} onClick={handleLeftArrowClick} />
+      <div className="flex mt-[118px] justify-center gap-[39px] font-semibol cursor-pointer text-white">
+        <BsArrowLeftCircle size={47} onClick={handleLeftArrowClick}  />
         <BsArrowRightCircle size={47} onClick={handleRightArrowClick} />
       </div>
     </div>
