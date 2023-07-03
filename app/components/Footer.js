@@ -24,10 +24,10 @@ const Footer = () => {
                     <div className="flex flex-col ml-[30px] sm:ml-[75px] md:ml-1">
 
                     <Link href='/'>
-          <div className='leading-[63.98px] flex-start md:flex-start'>
-            <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} className='leading-[63.98px]  mt-12  hidden sm:hidden md:block' />
-          </div>
-        </Link>
+                        <div className='leading-[63.98px] '>
+                            <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} className='leading-[63.98px] mx-auto  sm:w-[139px] sm:h-[64px] w-[100px] h-[45px]' />
+                        </div>
+                    </Link>
                         <p className="font-regular texy text-lg ml-4 h-[135px] mt-[35.16px] sm:mb-4  mb-8 sm:text-center">
                             LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
                             standard dummy text ever since the 1500s, when
