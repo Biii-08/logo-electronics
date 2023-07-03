@@ -38,11 +38,12 @@ const Productcomp = ({ selectedCategory, onCategoryChange }) => {
             <Image src="/image/logo.png" alt='' width={1920} height={3774} className="filter brightness-50 dark:brightness-50 h-[549px] w-full object-cover" />
 
             <div className='absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
-                <h1 className="sm:text-[60px] text-[40px] font-routhem font-bold sm:mt-[434px] mt-[50px] mb-12 wrap">PRODUCTS</h1>
+                <h1 className="sm:text-[60px] text-[40px] font-routhem font-bold mb-12 wrap">PRODUCTS</h1>
             </div>
+
             <div className='flex p-10 sm:justify-between justify-center flex-col sm:flex-row items-center mt-20 mb-36'>
             
-            <h1 className='text-[32px] font-semibold text-white mb-12 capitalize'>{filterCategories ? `>> ${filterCategories}` : '>> All Products'}</h1>
+                <h1 className='text-[32px] font-semibold text-white mb-12 capitalize text-color'>{filterCategories ? `>> ${filterCategories}` : '>> All Products'}</h1>
 
 
                 {/* <DropdownButton /> */}
@@ -66,16 +67,19 @@ const Productcomp = ({ selectedCategory, onCategoryChange }) => {
                                 paddingRight: '40px',
                             }}
                         >
-                            <option value="" className='item-center justify-center text-center'>All Products</option>
+                            <option value="" className='items-center flex justify-center text-center'>All Products</option>
+
                             {categories.map((category) => (
                                 <option key={category} value={category}>
                                     {category}
                                 </option>
+
                             ))}
                         </select>
                     </div>
                 </div>
             </div>
+
             <Product selectedCategory={selectedCategory} filterCategories={filterCategories} />
 
         </div>

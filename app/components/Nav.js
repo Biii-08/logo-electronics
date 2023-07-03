@@ -21,16 +21,16 @@ const Nav = () => {
   return (
     <div style={{ backgroundColor: `${navBg}` }} className='flex justify-between items-center'>
       {/* web view navbar */}
-      <div className='w-full h-[40px] md:h-[148px] flex justify-between overflow-hidden z-50' style={{ boxShadow: '0px 4px 4px #ffffff40' }}>
+      <div className='w-full h-[0px] md:h-[148px] gap-[600px] flex justify-center overflow-hidden z-50' style={{ boxShadow: '0px 4px 4px #ffffff40' }}>
         {/* logo */}
         <Link href='/'>
           <div className='leading-[63.98px] flex-start md:flex-start'>
-            <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} className='leading-[63.98px] ml-8 mt-12  hidden sm:hidden md:block' />
+            <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} className='leading-[63.98px]  mt-12  hidden sm:hidden md:block' />
           </div>
         </Link>
 
         {/* nav contents */}
-        <div id='nav' className='hidden w-full md:block md:w-auto'>
+        <div id='nav' className='hidden w-full md:block md:w-auto '>
           <ul className='font-medium flex flex-col p-4 md:p-2 mt-16 md:flex-row md:space-x-8'>
             <li className='text-[25px] leading-[38px] text-color font-semibold px-[25px] gradient-border rounded-full'>
               <Link href='/'>Home</Link>
@@ -41,7 +41,7 @@ const Nav = () => {
           </ul>
         </div>
         <div onClick={handleNav} className=' absolute md:hidden p-6 cursor-pointer hover:scale-110 ease-in duration-300 mt-9 right-0'>
-          <RiMenuUnfoldLine size={30} className='text-white ' />
+          <RiMenuUnfoldLine size={48} className='text-white ' />
         </div>
       </div>
 
@@ -58,8 +58,8 @@ const Nav = () => {
           <div>
               <div className='flex w-full items-center justify-between hover:scale-110 ease-in duration-300'>
                 <Link href='/' className='smooth=(true) duration-500'></Link>
-                <div onClick={handleNav} className=' cursor-pointer  right-0 mt-5'>
-                  <RiMenuFoldLine size={30} className='text-white ' />
+                <div onClick={handleNav} className=' cursor-pointer  right-0 mt-[47px]'>
+                  <RiMenuFoldLine size={55} className='text-white ' />
                 </div>
               </div>
               <div className='flex justify-center my-4 mt-[125px]'>

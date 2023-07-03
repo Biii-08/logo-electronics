@@ -16,18 +16,13 @@ const Footer = () => {
     return (
         < >
             <div id='rocket'
-                className="flex flex-col md:flex-row md:justify-between text-white p-10 relative background" >
-                  <div className="mask-image absolute top-0 left-0 w-full h-full"></div>
+                className="flex flex-col md:flex-row md:justify-between text-white p-10 relative background mt-40" >
+                 
 
                 <div className="flex items-center md:w-1/4">
                     <div className="flex flex-col ml-[30px] sm:ml-[75px] md:ml-1">
-                    <Image
-                      src="/image/navlogo.png"
-                      alt="Logo"
-                      width={139}
-                      height={64}
-                      className="leading-[63.98px] mx-auto  sm:w-[139px] sm:h-[64px] w-[100px] h-[45px]"
-                    />
+
+                    <Image src="/image/navlogo.png" alt="Logo" width={139} height={64} className="leading-[63.98px] mx-auto  sm:w-[139px] sm:h-[64px] w-[100px] h-[45px]"/>
 
                         <p className="font-regular texy text-lg ml-4 h-[135px] mt-[35.16px] sm:mb-4  mb-8 sm:text-center">
                             LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
@@ -81,7 +76,7 @@ const Footer = () => {
             
 
             <div className="text-center bottom-0 left-0 right-0 bg-[#380D41] ">
-                <p className="p-[39px] font-semibold text-[18px] text-white">COPYRIGHT 2021 lOGO ALL RIGHT RESERVED</p>
+                <p className="p-[39px] font-semibold sm:text-[18px] text-[12.23px] text-white">COPYRIGHT 2021 lOGO ALL RIGHT RESERVED</p>
             </div>
         </>
     );

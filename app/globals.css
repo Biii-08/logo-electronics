@@ -2,6 +2,8 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
+
+
 @font-face {
   font-family: "Routhem";
   src: url("/fonts/Routhem.woff2") format("woff2");
@@ -9,6 +11,15 @@
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+}
+
+
 html{
   scroll-behavior: smooth;
 }
@@ -23,4 +34,5 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
 }

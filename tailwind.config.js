@@ -5,16 +5,19 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  
   theme: {
     fontFamily: {
       routhem: ['Routhem', 'sans-serif'],
-      
     },
     extend: {
        borderWidth: {
         '2': '2px',
       },
-      
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      }, 
+
       colors: {
         pink: '#FF81E3',
       },

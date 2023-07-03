@@ -43,6 +43,11 @@
   align-items: center;
 }
 
+.footer-content .social-media-icons {
+  display: flex;
+  align-items: center;
+}
+
 .social-media-icons h1 {
   font-weight: bold;
   margin-right: 10px;
@@ -81,6 +86,7 @@
     height: 900px;
     margin-bottom: 0;
     opacity: 95%;
+    margin-top: 200px;
     background-image: url("/image/Rectangle 126.png");
   }
 }
