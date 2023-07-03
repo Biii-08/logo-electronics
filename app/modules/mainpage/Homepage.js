@@ -23,9 +23,9 @@ const HomePage = () => {
   return (
     <div className=" relative flex justify-center items-center mt-0 bg-[#380D41]">
       {/* image */}
-      <div className='leading-[63.98px] flex-start md:flex-start'>
-            <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} className='leading-[63.98px]  mt-12  hidden sm:hidden md:block' />
-          </div>
+      <div className="image-wrapper  w-screen h-[519px] sm:h-[839px] ">
+        <Image src="/assets/images/logo.png" alt="homepage image" layout="fill"objectFit="cover" className="w-screen h-full object-cover"/>
+      </div>
 
       {/* heading inside image */}
       <div id='main' className='absolute  sm:mt-[200px] top-[201px] justify-center transform -translate-y-1/2 text-center'>
