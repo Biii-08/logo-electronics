@@ -35,7 +35,7 @@ const Productcomp = ({ selectedCategory, onCategoryChange }) => {
 
     return (
         <div className='relative'>
-            <Image src="/image/logo.png" alt='' width={1920} height={3774} className="filter brightness-50 dark:brightness-50 h-[549px] w-full object-cover" />
+            <Image src="/assets/images/logo.png" alt='' width={1920} height={3774} className="filter brightness-50 dark:brightness-50 h-[549px] w-full object-cover" />
 
             <div className='absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
                 <h1 className="sm:text-[60px] text-[40px] font-routhem font-bold mb-12 wrap">PRODUCTS</h1>

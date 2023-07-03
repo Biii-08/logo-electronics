@@ -73,7 +73,7 @@ const Footer = () => {
                 </div>
                 <div className='rocket'>
                 <a href="#" onClick={scrollToTop} className="cursor-pointer">
-                  <img src="/image/rocket.png" alt="Scroll to top" className="right-0 absolute top-0 sm:right-0 md:w-[90px] md:h-[150px] sm:w-[70px] sm:h-[100px] w-[70px] h-[100px]"  />
+                  <img src="/assets/images/rocket.png" alt="Scroll to top" className="right-0 absolute top-0 sm:right-0 md:w-[90px] md:h-[150px] sm:w-[70px] sm:h-[100px] w-[70px] h-[100px]"  />
                 </a>
                 </div>
             </div>
