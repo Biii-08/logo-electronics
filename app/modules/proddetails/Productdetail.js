@@ -41,7 +41,7 @@ const ProductDetails = ({ productId }) => {
   return (
     <div id="prod-detail" className="relative top-0 bg-[#380D41]">
       <img
-        src="/image/Detail.png"
+        src="/assets/images/Detail.png"
         alt=" Product details"
         className="w-full h-[400px] sm:h-full mt-0"
       />

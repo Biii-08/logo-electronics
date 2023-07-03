@@ -59,7 +59,7 @@ const CardItem = () => {
             )}
             <div className='md:mt-0 mt-[270px]   image flex'>
             <Image
-          src="/image/arrow.png"
+          src="/assets/images/arrow.png"
           loading="lazy"
           className="cursor-pointer flex-shrink-0"
           width={46.97}
@@ -67,7 +67,7 @@ const CardItem = () => {
           onClick={handleLeftArrowClick}
         />
         <Image
-          src="/image/Vector.png"
+          src="/assets/images/Vector.png"
           className="absolute right-0 mr-[117px] cursor-pointer flex flex-shrink-0"
           width={46.97}
           height={46.97}
