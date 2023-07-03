@@ -4,6 +4,7 @@ import './footer.css';
 import { BsFacebook, BsInstagram, BsYoutube } from 'react-icons/bs';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const scrollToTop = () => {
     window.scrollTo({
@@ -22,8 +23,11 @@ const Footer = () => {
                 <div className="flex items-center md:w-1/4">
                     <div className="flex flex-col ml-[30px] sm:ml-[75px] md:ml-1">
 
-                    <Image src="/image/navlogo.png" alt="Logo" width={139} height={64} className="leading-[63.98px] mx-auto  sm:w-[139px] sm:h-[64px] w-[100px] h-[45px]"/>
-
+                    <Link href='/'>
+          <div className='leading-[63.98px] flex-start md:flex-start'>
+            <Image src='/assets/images/navlogo.png' alt='Logo' width={139} height={64} className='leading-[63.98px]  mt-12  hidden sm:hidden md:block' />
+          </div>
+        </Link>
                         <p className="font-regular texy text-lg ml-4 h-[135px] mt-[35.16px] sm:mb-4  mb-8 sm:text-center">
                             LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
                             standard dummy text ever since the 1500s, when
